@@ -1,6 +1,6 @@
 {
   "name": "exteon/uri-mapper",
-  "description": "description",
+  "description": "A framework library for mapping hierarchical URI systems.",
   "license": "Apache-2.0",
   "version": "1.0.0",
   "authors": [
