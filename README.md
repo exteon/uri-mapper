@@ -534,3 +534,21 @@ methods, like regular string concatenation for unix paths.
 In short, while `exteon/uri-mapper` abstracts the complexity of mapping 
 resources, it is smart to keep that complexity small in the first place, to 
 minimize performance impact. 
+
+### Priming
+
+To optimize performance, `UriMapper` uses a system of lookup data structures and
+relation caches. This lookup/caching system is invalidated on any call to
+`UriMapper::addRoot()` or `UriMapper::addJoin()` and re-primed on the next
+mapping call. The process of priming the mapper is performance-intensive so for 
+best performance, add all `Root`s and `Join`s in one batch at the initialisation
+of your application, so that you don't generate too many mapper primes.
+
+You can also use `UriMapper::prime()` to explicitly reprime `UriMapper` when 
+your initialisation is done. This is not mandatory, it can just help you when 
+doing performance profiling to separate the priming effort, otherwise the prime
+will be done implicitly and absorbed into the next mapping call (i.e. 
+`UriMapper::mapUri()`). It can also help with validating the mapping structure,
+as some validation exceptions can be thrown in the priming phase, you might want 
+to explicitly catch them if you are implementing a dynamic mapping scheme that 
+can be invalid. 
