@@ -73,15 +73,15 @@
         }
 
         /**
-         * @param Path $path
+         * @param AbstractPath $path
          * @param string $targetContext
-         * @return Path|null
+         * @return AbstractPath|null
          * @throws Exception
          */
         public function mapPath(
-            Path $path,
+            AbstractPath $path,
             string $targetContext = ''
-        ): ?Path {
+        ): ?AbstractPath {
             $sourceContext = $path->getRoot()->getContext();
             $sourceJoinPoint = $this->getSourceJoinPointByContext(
                 $sourceContext

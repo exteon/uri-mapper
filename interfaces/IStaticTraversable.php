@@ -5,12 +5,12 @@
     interface IStaticTraversable
     {
         /**
-         * @return Path[]
+         * @return AbstractPath[]
          */
         public function getDescendants(): array;
 
         /**
-         * @return Path[]
+         * @return AbstractPath[]
          */
         public function getChildren(): array;
     }

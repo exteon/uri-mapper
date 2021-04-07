@@ -65,14 +65,14 @@
         /**
          * @param AbstractUri $uri
          * @param string $context
-         * @return Path|null
+         * @return AbstractPath|null
          * @throws ErrorException
          * @throws Exception
          */
         public function mapUri(
             AbstractUri $uri,
             string $context = ''
-        ): ?Path {
+        ): ?AbstractPath {
             $root = $this->lookupRoot($uri, $context);
             if ($root) {
                 return $root->getPath($uri);
@@ -440,10 +440,10 @@
 
         /**
          * @param Root $root
-         * @return Path|null
+         * @return AbstractPath|null
          * @throws Exception
          */
-        public function getParentRootPath(Root $root): ?Path
+        public function getParentRootPath(Root $root): ?AbstractPath
         {
             $this->internalPrime(false);
             $parentRoot = $this->rootParentMap[$root] ?? null;
@@ -470,15 +470,15 @@
         }
 
         /**
-         * @param Path $path
+         * @param AbstractPath $path
          * @param string $targetContext
-         * @return Path|null
+         * @return AbstractPath|null
          * @throws Exception
          */
         public function mapPath(
-            Path $path,
+            AbstractPath $path,
             string $targetContext
-        ): ?Path {
+        ): ?AbstractPath {
             $sourceContext = $path->getContext();
             if ($sourceContext === $targetContext) {
                 return $path;

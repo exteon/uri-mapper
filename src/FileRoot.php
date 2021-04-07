@@ -45,7 +45,7 @@
          * @return FilePath
          * @throws ErrorException
          */
-        public function getPath(?AbstractUri $uri = null): Path
+        public function getPath(?AbstractUri $uri = null): AbstractPath
         {
             return new FilePath($this, $uri ? UnixPathUri::from($uri) : null);
         }

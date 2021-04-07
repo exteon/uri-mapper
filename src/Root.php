@@ -73,10 +73,10 @@
 
         /**
          * @param AbstractUri|null $uri
-         * @return Path
+         * @return AbstractPath
          * @throws ErrorException
          */
-        public function getPath(?AbstractUri $uri = null): Path
+        public function getPath(?AbstractUri $uri = null): AbstractPath
         {
             return new Path($this, $uri);
         }

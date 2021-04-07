@@ -7,7 +7,7 @@
     use Exteon\Uri\AbstractUri;
     use InvalidArgumentException;
 
-    class Path implements IPath
+    class Path extends AbstractPath
     {
         /** @var Root */
         protected $root;
@@ -53,25 +53,12 @@
         }
 
         /**
-         * @param Path $instance
-         * @return Path
-         * @throws ErrorException
-         */
-        public static function type(Path $instance): Path
-        {
-            if (!($instance instanceof static)) {
-                throw new ErrorException('Invalid type');
-            }
-            return $instance;
-        }
-
-        /**
          * @param int $levels
-         * @return Path|null
+         * @return AbstractPath|null
          * @throws ErrorException
          * @throws Exception
          */
-        public function ascend(int $levels = 1): ?IPath
+        public function ascend(int $levels = 1): ?AbstractPath
         {
             if ($levels <= 0) {
                 throw new InvalidArgumentException(
@@ -102,11 +89,11 @@
 
         /**
          * @param string $path
-         * @return Path|null
+         * @return AbstractPath|null
          * @throws ErrorException
          * @throws Exception
          */
-        public function descend(string $path): ?IPath
+        public function descend(string $path): ?AbstractPath
         {
             if (!$path) {
                 return $this;
@@ -191,10 +178,10 @@
 
         /**
          * @param string $targetContext
-         * @return Path|null
+         * @return AbstractPath|null
          * @throws Exception
          */
-        public function toContext(string $targetContext): ?IPath
+        public function toContext(string $targetContext): ?AbstractPath
         {
             if ($this->getContext() === $targetContext) {
                 return $this;

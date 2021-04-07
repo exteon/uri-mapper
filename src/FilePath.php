@@ -39,7 +39,7 @@
         }
 
         /**
-         * @return Path[]
+         * @return AbstractPath[]
          * @throws ErrorException
          */
         public function getDescendants(): array
@@ -59,7 +59,7 @@
         }
 
         /**
-         * @return Path[]
+         * @return AbstractPath[]
          * @throws ErrorException
          */
         public function getChildren(): array

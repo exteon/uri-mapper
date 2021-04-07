@@ -18,9 +18,9 @@
 
         /**
          * @param AbstractUri|null $uri
-         * @return Path
+         * @return AbstractPath
          */
-        public function getPath(?AbstractUri $uri = null): Path;
+        public function getPath(?AbstractUri $uri = null): AbstractPath;
 
         /**
          * @return AbstractUri|null
