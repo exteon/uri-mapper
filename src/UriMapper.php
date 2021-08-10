@@ -38,7 +38,7 @@
         protected $rootParentMap;
 
         /** @var Root[] */
-        protected $roots;
+        protected $roots = [];
 
         /** @var array<string,array<string,Root>> */
         protected $rootsByUri;
