@@ -121,7 +121,7 @@
             if (!$this->getUri()) {
                 throw new Exception('Cannot rename file root');
             }
-            $newUri = $this->getRelativeUriClone()->setDocument($newName);
+            $newUri = (clone $this->getUri())->ascend(1)->descend($newName);
             $result = rename($this->getUnixPath(), $newUri->getUnixPath());
             if ($result) {
                 $this->setRelativeUri($newUri);
