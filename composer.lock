@@ -4,21 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9bd0725de5cd58c25a754efe7b14f89",
+    "content-hash": "3943e2901e3a1fab250e4b4d8ef764f5",
     "packages": [
         {
             "name": "exteon/file-helper",
-            "version": "1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/exteon/file-helper.git",
-                "reference": "f742cdf633f888bbb478befab00e3b51a817c56c"
-            },
+            "version": "1.6.0",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/exteon/file-helper/zipball/f742cdf633f888bbb478befab00e3b51a817c56c",
-                "reference": "f742cdf633f888bbb478befab00e3b51a817c56c",
-                "shasum": ""
+                "type": "path",
+                "url": "/mnt/libraries/file-helper",
+                "reference": "4206804e8a663b67c1dbb3a5a9538353772de80a"
             },
             "type": "library",
             "autoload": {
@@ -28,7 +22,6 @@
                     ]
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -39,25 +32,17 @@
             ],
             "description": "Library implementing various common file operations",
             "homepage": "https://github.com/exteon/file-helper",
-            "support": {
-                "issues": "https://github.com/exteon/file-helper/issues",
-                "source": "https://github.com/exteon/file-helper/tree/1.3.0"
-            },
-            "time": "2021-08-05T11:07:33+00:00"
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "exteon/uri",
             "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/exteon/uri.git",
-                "reference": "8199650b891d0d2fbfa14caa72168fe084acb7c7"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/exteon/uri/zipball/8199650b891d0d2fbfa14caa72168fe084acb7c7",
-                "reference": "8199650b891d0d2fbfa14caa72168fe084acb7c7",
-                "shasum": ""
+                "type": "path",
+                "url": "/mnt/libraries/uri",
+                "reference": "8199650b891d0d2fbfa14caa72168fe084acb7c7"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.5"
@@ -70,7 +55,13 @@
                     ]
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Test\\Exteon\\Uri\\": [
+                        "test"
+                    ]
+                }
+            },
             "license": [
                 "Apache-2.0"
             ],
@@ -81,11 +72,9 @@
                 }
             ],
             "description": "A set of objects for parsing, composing and manipulating URIs",
-            "support": {
-                "issues": "https://github.com/exteon/uri/issues",
-                "source": "https://github.com/exteon/uri/tree/2.0.1"
-            },
-            "time": "2021-05-06T11:26:58+00:00"
+            "transport-options": {
+                "relative": false
+            }
         }
     ],
     "packages-dev": [
@@ -487,33 +476,33 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.13.0",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "be1996ed8adc35c3fd795488a653f4b518be70ea"
+                "reference": "d86dfc2e2a3cd366cee475e52c6bb3bbc371aa0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/be1996ed8adc35c3fd795488a653f4b518be70ea",
-                "reference": "be1996ed8adc35c3fd795488a653f4b518be70ea",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/d86dfc2e2a3cd366cee475e52c6bb3bbc371aa0e",
+                "reference": "d86dfc2e2a3cd366cee475e52c6bb3bbc371aa0e",
                 "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "^1.2",
-                "php": "^7.2 || ~8.0, <8.1",
+                "php": "^7.2 || ~8.0, <8.2",
                 "phpdocumentor/reflection-docblock": "^5.2",
                 "sebastian/comparator": "^3.0 || ^4.0",
                 "sebastian/recursion-context": "^3.0 || ^4.0"
             },
             "require-dev": {
-                "phpspec/phpspec": "^6.0",
+                "phpspec/phpspec": "^6.0 || ^7.0",
                 "phpunit/phpunit": "^8.0 || ^9.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11.x-dev"
+                    "dev-master": "1.x-dev"
                 }
             },
             "autoload": {
@@ -548,9 +537,9 @@
             ],
             "support": {
                 "issues": "https://github.com/phpspec/prophecy/issues",
-                "source": "https://github.com/phpspec/prophecy/tree/1.13.0"
+                "source": "https://github.com/phpspec/prophecy/tree/1.14.0"
             },
-            "time": "2021-03-17T13:42:18+00:00"
+            "time": "2021-09-10T09:02:12+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -851,16 +840,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "8.5.19",
+            "version": "8.5.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "496281b64ec781856ed0a583483b5923b4033722"
+                "reference": "9deefba183198398a09b927a6ac6bc1feb0b7b70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/496281b64ec781856ed0a583483b5923b4033722",
-                "reference": "496281b64ec781856ed0a583483b5923b4033722",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9deefba183198398a09b927a6ac6bc1feb0b7b70",
+                "reference": "9deefba183198398a09b927a6ac6bc1feb0b7b70",
                 "shasum": ""
             },
             "require": {
@@ -932,7 +921,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/8.5.19"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/8.5.20"
             },
             "funding": [
                 {
@@ -944,7 +933,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-07-31T15:15:06+00:00"
+            "time": "2021-08-31T06:44:38+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -1570,6 +1559,7 @@
                     "type": "github"
                 }
             ],
+            "abandoned": true,
             "time": "2020-11-30T07:30:19+00:00"
         },
         {
