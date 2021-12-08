@@ -90,7 +90,8 @@
 
         public function getFilename(): string
         {
-            return $this->getUri()->getDocument();
+            $pathTrail = $this->getUri()->getPathTrail();
+            return end($pathTrail);
         }
 
         public function isFile(): bool
