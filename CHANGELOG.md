@@ -1,3 +1,9 @@
+### 1.0.3
+
+#### Bugfixes
+
+* `FilePath::getFilename()` was always returning an empty string
+
 ### 1.0.2
 
 #### Bugfixes
